@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Shebang for better file detection
+# shellcheck enable=require-variable-braces
+
+BASE_ADD_USER="yes"
+BASE_USER="pi"
+BASE_USER_PASSWORD="raspberry"
+
+# Image source
+DOWNLOAD_URL_CHECKSUM="https://dl.armbian.com/orangepi4-lts/archive/Armbian_24.2.1_Orangepi4-lts_jammy_current_6.6.16.img.xz.sha"
+DOWNLOAD_URL_IMAGE="https://dl.armbian.com/orangepi4-lts/archive/Armbian_24.2.1_Orangepi4-lts_jammy_current_6.6.16.img.xz"
+
+# export Variables
+export BASE_ROOT_PARTITION=1
+export BASE_IMAGE_ENLARGEROOT=10500
+export BASE_IMAGE_RESIZEROOT=600
+export BASE_SSH_ENABLE="no"
+export DOWNLOAD_URL_CHECKSUM
+export DOWNLOAD_URL_IMAGE
+
+export MODULES="base,deb_namserver,passwordless_sudo,pkgupgrade(network,opi4lts_config,klipper,node,is_req_preinstall,moonraker,ratos(armbian,mainsail,crowsnest,linear_movement_analysis,timelapse,spoolman,klipperscreen,rpi_mcu,dfu-util),password-for-sudo),postrename"

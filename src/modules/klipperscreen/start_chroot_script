@@ -17,12 +17,17 @@ echo needs_root_rights=yes>>/etc/X11/Xwrapper.config
 
 echo_green "Installing KlipperScreen"
 
-cd /home/pi
+pushd "/home/${BASE_USER}" &> /dev/null || exit 1
+mkdir KlipperScreen
+chown pi:pi KlipperScreen
 gitclone KLIPPERSCREEN KlipperScreen
-cd /home/pi/KlipperScreen
+pushd "/home/${BASE_USER}/KlipperScreen" &> /dev/null || exit 1
 sudo -u ${BASE_USER} ./scripts/KlipperScreen-install.sh
 
 # Mute output from klipperscreen service
 sudo sed -i 's/\[Service\]/\[Service\]\n\StandardOutput=null\nStandardError=null/g' /etc/systemd/system/KlipperScreen.service
+
+popd &> /dev/null || exit 1
+popd &> /dev/null || exit 1
 
 sudo systemctl stop KlipperScreen
