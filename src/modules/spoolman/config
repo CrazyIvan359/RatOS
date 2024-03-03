@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#### Spoolman - Keep track of your inventory of 3D-printer filament spools
+####
+#### Written by Mike Murton aka CrazyIvan359
+#### Copyright 2024
+####
+#### This File is distributed under GPLv3
+####
+# shellcheck disable=all
+
+# spoolman setup
+[[ -n "$SPOOLMAN_INSTALL_DIR" ]] || SPOOLMAN_INSTALL_DIR="/home/${BASE_USER}/Spoolman"
+[[ -n "$SPOOLMAN_DATA_DIR" ]] || SPOOLMAN_DATA_DIR="/home/${BASE_USER}/spoolman_data"
+[[ -n "$SPOOLMAN_DEFAULT_CONF" ]] || SPOOLMAN_DEFAULT_CONF="moonraker.conf"
+[[ -n "$SPOOLMAN_CONFIG_PATH" ]] || SPOOLMAN_CONFIG_PATH="/home/${BASE_USER}/printer_data/config"
+[[ -n "$SPOOLMAN_LOG_PATH" ]] || SPOOLMAN_LOG_PATH="/home/${BASE_USER}/printer_data/logs"
+[[ -n "$SPOOLMAN_MOONRAKER_CONF_PATH" ]] || SPOOLMAN_MOONRAKER_CONF_PATH="${SPOOLMAN_CONFIG_PATH}/moonraker.conf"
