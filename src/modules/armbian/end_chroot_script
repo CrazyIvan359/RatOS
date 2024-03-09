@@ -43,7 +43,3 @@ sudo passwd -d root
 ## Step 4: Lock root account
 sudo passwd -l root
 ## END
-
-## Step 5: Remove passwdless sudo
-sed -i '/'"${BASE_USER}"' ALL=(ALL:ALL) NOPASSWD:ALL/d' /etc/sudoers
-## END
