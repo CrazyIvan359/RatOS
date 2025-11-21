@@ -80,7 +80,7 @@ jobs:
         uses: CrazyIvan359/MainsailOS-actions/build-image@x86
         with:
           config: ${{ matrix.config }}
-          custompios-ref: 1.5.0
+          custompios-ref: x86
 
       - name: Rename image file
         id: move-image
