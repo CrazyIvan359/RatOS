@@ -57,15 +57,13 @@ jobs:
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
         with:
-          # this might remove tools that are actually needed,
-          # if set to "true" but frees about 6 GB
           tool-cache: false
           android: true
           dotnet: true
           haskell: true
-          large-packages: true
-          docker-images: true
-          swap-storage: true
+          large-packages: false
+          docker-images: false
+          swap-storage: false
 
       - name: Cache aptitude
         uses: actions/cache@v4
