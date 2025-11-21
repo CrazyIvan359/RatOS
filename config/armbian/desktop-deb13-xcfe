@@ -3,6 +3,7 @@
 # shellcheck enable=require-variable-braces
 
 BASE_ARCH="x86_64"
+BASE_BOARD="armbian_debian_xcfe"
 BASE_BOOT_PARTITION=2
 BASE_ROOT_PARTITION=3
 BASE_IMAGE_ENLARGEROOT=10500
@@ -13,6 +14,7 @@ DOWNLOAD_URL_IMAGE="https://armbian.lv.auroradev.org/dl/uefi-x86/archive/Armbian
 
 # export Variables
 export BASE_ARCH
+export BASE_BOARD
 export BASE_BOOT_PARTITION
 export BASE_ROOT_PARTITION
 export BASE_IMAGE_ENLARGEROOT
