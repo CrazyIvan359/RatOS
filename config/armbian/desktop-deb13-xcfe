@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Shebang for better file detection
+# shellcheck enable=require-variable-braces
+
+BASE_ARCH="amd64"
+BASE_IMAGE_ENLARGEROOT=10500
+
+# Image source
+DOWNLOAD_URL_CHECKSUM="https://armbian.lv.auroradev.org/dl/uefi-x86/archive/Armbian_25.8.1_Uefi-x86_trixie_current_6.12.41_xfce_desktop.img.xz.sha"
+DOWNLOAD_URL_IMAGE="https://armbian.lv.auroradev.org/dl/uefi-x86/archive/Armbian_25.8.1_Uefi-x86_trixie_current_6.12.41_xfce_desktop.img.xz"
+
+# export Variables
+export BASE_ARCH
+export BASE_IMAGE_ENLARGEROOT
+export DOWNLOAD_URL_CHECKSUM
+export DOWNLOAD_URL_IMAGE
