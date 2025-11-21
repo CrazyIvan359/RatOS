@@ -3,6 +3,8 @@
 # shellcheck enable=require-variable-braces
 
 BASE_ARCH="amd64"
+BASE_BOOT_PARTITION=2
+BASE_ROOT_PARTITION=3
 BASE_IMAGE_ENLARGEROOT=10500
 
 # Image source
@@ -11,6 +13,8 @@ DOWNLOAD_URL_IMAGE="https://armbian.lv.auroradev.org/dl/uefi-x86/archive/Armbian
 
 # export Variables
 export BASE_ARCH
+export BASE_BOOT_PARTITION
+export BASE_ROOT_PARTITION
 export BASE_IMAGE_ENLARGEROOT
 export DOWNLOAD_URL_CHECKSUM
 export DOWNLOAD_URL_IMAGE
