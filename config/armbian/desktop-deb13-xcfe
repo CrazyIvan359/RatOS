@@ -2,7 +2,7 @@
 # Shebang for better file detection
 # shellcheck enable=require-variable-braces
 
-BASE_ARCH="amd64"
+BASE_ARCH="x86_64"
 BASE_BOOT_PARTITION=2
 BASE_ROOT_PARTITION=3
 BASE_IMAGE_ENLARGEROOT=10500

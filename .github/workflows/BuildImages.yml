@@ -77,7 +77,7 @@ jobs:
 
       - name: Build image
         id: build
-        uses: mainsail-crew/MainsailOS-actions/build-image@master
+        uses: CrazyIvan359/MainsailOS-actions/build-image@x86
         with:
           config: ${{ matrix.config }}
           custompios-ref: 1.5.0
