@@ -1,0 +1,16 @@
+[Unit]
+Description=Spoolman
+After=network-online.target nss-lookup.target
+Wants=network-online.target
+Before=nginx.service
+
+[Service]
+Type=simple
+ExecStart=bash %INSTALL_DIR%/scripts/start.sh
+WorkingDirectory=%INSTALL_DIR%
+User=%USER%
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
